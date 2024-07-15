@@ -1,0 +1,115 @@
+<div class="wrapper">
+  <div class="profile">
+    <div class="content">
+      <h1>Add New User</h1>
+      <form action="">
+        <!-- Photo -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="fname">Full Name</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="fullName" name="fullName" tabindex="1" [(ngModel)]="UserData.fullName" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="grid-35">
+            <label for="password">Password</label>
+          </div>
+          <div class="grid-65">
+            <input type="password" id="password" name="password" tabindex="1" [(ngModel)]="UserData.password" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="grid-35">
+            <label for="email">Email</label>
+          </div>
+          <div class="grid-65">
+            <input type="email" id="email" name="email" tabindex="2" [(ngModel)]="UserData.email" />
+          </div>
+        </fieldset>
+        <!-- Description about User -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="description">About</label>
+          </div>
+          <div class="grid-65">
+            <textarea name="about" id="" cols="30" rows="auto" [(ngModel)]="UserData.about"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <input type="button" class="Btn cancel" value="Cancel" [routerLink]="'/home'" />
+          <input type="submit" class="Btn" value="Save Changes" (click)="onSubmit()" />
+        </fieldset>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="main">
+    <div class="container">
+        <div class="main-body">
+
+            <div class="row gutters-sm" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Full Name</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" style="width: 100%;" [(ngModel)]="UserData.fullName">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="email" style="width: 100%;" [(ngModel)]="UserData.email">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Password</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" style="width: 100%;" [(ngModel)]="UserData.password">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">About</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <textarea name="" id="" cols="52" rows="5" [(ngModel)]="UserData.about"></textarea>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-12" style="display: flex; flex-direction: row ; justify-content: space-between;">
+                                    <a class="btn btn-info " target="__blank" (click)="onSubmit()">Edit</a>
+                                    <a class="btn btn-info " target="__blank"
+                                        href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

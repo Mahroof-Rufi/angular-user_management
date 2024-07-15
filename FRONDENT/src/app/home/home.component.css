@@ -1,0 +1,54 @@
+.main {
+	background: linear-gradient(90deg, #e8e8e8 50%, #3d009e 50%);
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+}
+
+/* .portfolio{
+	padding:6%;
+	text-align:center;
+} */
+.heading {
+	background: #fff;
+	padding: 1%;
+	text-align: left;
+	box-shadow: 0px 0px 4px 0px #545b62;
+	display: flex;
+	justify-content: space-between;
+}
+
+.heading img {
+	width: 10%;
+}
+
+.bio-info {
+	padding: 5%;
+	background: #fff;
+	box-shadow: 0px 0px 4px 0px #b0b3b7;
+}
+
+.name {
+	font-family: 'Charmonman', cursive;
+	font-weight: 600;
+}
+
+.bio-image {
+	text-align: center;
+}
+
+.bio-image img {
+	border-radius: 50%;
+	height: 250px;
+	width: 250px;
+}
+
+.bio-content {
+	text-align: left;
+}
+
+.bio-content p {
+	font-weight: 600;
+	font-size: 30px;
+}

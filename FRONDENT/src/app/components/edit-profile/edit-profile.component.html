@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <div class="profile">
+    <div class="content">
+      <h1>Edit Profile</h1>
+      <form action="">
+        <!-- Photo -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="avatar">Your Photo</label>
+          </div>
+          <div class="grid-65">
+            <img [src]="'/assets/' + UserData.image" class="photo" title="Upload your Avatar!" width="140" height="130">
+            <input type="file" class="btn" (change)="selectImage($event)" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="grid-35">
+            <label for="fname">Full Name</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="fullName" name="fullName" tabindex="1" [(ngModel)]="UserData.fullName" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="grid-35">
+            <label for="email">Email</label>
+          </div>
+          <div class="grid-65">
+            <input type="email" id="email" name="email" tabindex="2" [(ngModel)]="UserData.email" />
+          </div>
+        </fieldset>
+        <!-- Description about User -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="description">About</label>
+          </div>
+          <div class="grid-65">
+            <textarea name="about" id="" cols="30" rows="auto" [(ngModel)]="UserData.about"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <input type="button" class="Btn cancel" value="Cancel" [routerLink]="'/home'" />
+          <input type="submit" class="Btn" value="Save Changes" (click)="onEdit()" />
+        </fieldset>
+
+      </form>
+    </div>
+  </div>
+</div>

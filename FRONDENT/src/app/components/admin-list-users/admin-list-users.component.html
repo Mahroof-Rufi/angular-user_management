@@ -1,0 +1,51 @@
+<body>
+    <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row" style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <div class="col-sm-5">
+                            <h2>User <b>Management</b></h2>
+                        </div>
+                        <div class="col-sm-5">
+                            <button class="btn"
+                                style="color: aliceblue; background-color: black; cursor: pointer; height: auto; width: auto; border-radius: 5px;"
+                                [routerLink]="'/admin/add-user'"><i class="fa-solid fa-plus"></i></button>
+                            <input type="text" placeholder="Search.."
+                                style="height: 35px; width: 200px; float: right; border-radius: 5px;"
+                                (keyup)="serchUser($event)">
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>No:</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>About</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of usersData.usersData; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td style="display: flex; flex-direction: row;"><img [src]="'/assets/' + user.image"
+                                    class="avatar" alt="Avatar" *ngIf="user.image">{{user.fullName}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.about}}</td>
+                            <td style="display: flex; flex-direction: row; justify-content:space-between;">
+                                <a class="settings" title="Settings" data-toggle="tooltip"
+                                    [routerLink]="['/admin/edit-user', user._id]"><i
+                                        class="fa-solid fa-user-pen"></i></a>
+                                <br>
+                                <a class="delete" title="Delete" data-toggle="tooltip" (click)="deleteUser(user._id)"
+                                    style="cursor: pointer;"><i class="fa-solid fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
